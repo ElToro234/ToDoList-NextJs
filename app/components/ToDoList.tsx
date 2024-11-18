@@ -14,7 +14,7 @@ const ToDoList: React.FC<ToDoListProp> = ({ tasks }) =>{
     <thead>
       <tr>
         <th>Tasks To Do</th>
-        <th>Actions</th>
+        <th>Edit & Remove</th>
       </tr>
     </thead>
       <tbody>
