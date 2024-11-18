@@ -13,7 +13,7 @@ export default async function Home() {
         <AddTask/>
       </div>
 
-      <ToDoList/>
+      <ToDoList tasks ={ tasks }/>
       
     </main>
   );
