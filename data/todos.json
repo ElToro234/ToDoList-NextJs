@@ -1,20 +1,12 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "text": "buy groceries and beer"
+      "id": "de8d7775-5063-4812-b994-aeb181fbd02e",
+      "text": "Code python at 12:30pm"
     },
     {
-      "id": "2",
-      "text": "buy books"
-    },
-    {
-      "id": "3",
-      "text": "Buy phone"
-    },
-    {
-      "id": "5f0ec1fe-b1f0-4571-8af3-85bb257ce9e0",
-      "text": "VCoding"
+      "id": "3dc97888-d4ec-4dfc-bf9a-e82d32613a69",
+      "text": "Wash the dishes after eating lunch"
     }
   ]
 }

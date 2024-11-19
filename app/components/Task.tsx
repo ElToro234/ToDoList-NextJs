@@ -5,7 +5,7 @@ import React, { FormEventHandler, useState } from "react";
 import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Modal from "./Modal";
 import { useRouter } from "next/navigation";
-import { EditTodo } from "@/api";
+import { DeleteTodo, EditTodo } from "@/api";
 
 interface TaskProps {
     task: ITask
@@ -26,6 +26,13 @@ const Task: React.FC <TaskProps> = ( {task} ) =>{
       setModalOpenEdit(false);
       router.refresh();
   };
+
+  const handleDeleteTask = async (id: string) => {
+    await DeleteTodo(id);
+    setModalOpenDelete(false);
+    router.refresh();
+  };
+
     return <tr key = {task.id}>
     <td className="w-full">{task.text}</td>
     <td className='flex gap-5'>
@@ -44,7 +51,15 @@ const Task: React.FC <TaskProps> = ( {task} ) =>{
                   </div>
               </form>
           </Modal>
-      <FaRegTrashAlt className="text-red-500" cursor= 'pointer' size = {15}/>
+      <FaRegTrashAlt onClick= {() => setModalOpenDelete(true)} className="text-red-500" cursor= 'pointer' size = {15}/>
+        <Modal modalOpen = {openModalDelete} setModalOpen = { setModalOpenDelete } > 
+          <h3 className="text-lg">Are you sure, you want to delete this task?</h3>
+            <div className="modal-action">
+              <button onClick = {() => handleDeleteTask(task.id)} className="btn align-items: center">
+                Yes
+              </button>
+            </div>
+        </Modal>
     </td>
   </tr> ;
 
