@@ -4,21 +4,24 @@ import { ITask } from "@/types/tasks";
 import React, { FormEventHandler, useState } from "react";
 import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Modal from "./Modal";
+import { useRouter } from "next/navigation";
+import { EditTodo } from "@/api";
 
 interface TaskProps {
     task: ITask
 }
 const Task: React.FC <TaskProps> = ( {task} ) =>{
+  const router = useRouter();
   const[openModalEdit, setModalOpenEdit] = useState<boolean>(false);
   const[openModalDelete, setModalOpenDelete] = useState<boolean>(false);
   const[taskToEdit, setTaskToEdit] = useState<string>(task.text);
 
   const handleSubmitEditTask: FormEventHandler <HTMLFormElement> = async(e) => {
       e.preventDefault();
-      // await addTodo({
-      //     id: uuidv4(),
-      //     text: newTaskValue
-      // })
+      await EditTodo({
+          id: task.id,
+          text: taskToEdit
+      })
       setTaskToEdit("");
       setModalOpenEdit(false);
       router.refresh();
