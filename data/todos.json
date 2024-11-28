@@ -1,12 +1,32 @@
 {
   "tasks": [
     {
-      "id": "de8d7775-5063-4812-b994-aeb181fbd02e",
-      "text": "Code python at 12:30pm"
+      "id": "1901f117-1016-4070-898a-0306fc07d5a9",
+      "text": "Send email to admin"
     },
     {
-      "id": "3dc97888-d4ec-4dfc-bf9a-e82d32613a69",
-      "text": "Wash the dishes after eating lunch"
+      "id": "9be1bdbb-a790-406b-a7bf-95f67bf97518",
+      "text": "Go to the gym and workout on legs"
+    },
+    {
+      "id": "869b7a8a-d771-495a-b52e-68c789120c55",
+      "text": "Read a book for a least 20min "
+    },
+    {
+      "id": "54ec2789-71e8-4957-b6b4-f9ac94ee7564",
+      "text": "Complete a word puzzle"
+    },
+    {
+      "id": "f6e4f60d-ea94-4298-a3d7-a5625c0c722c",
+      "text": "Buy gas for the car"
+    },
+    {
+      "id": "f39463d4-663c-47f6-96ee-d8e33564d7a1",
+      "text": "Finish coding project"
+    },
+    {
+      "id": "cbe5f859-f2fb-4d20-8d4b-4b32d2a60289",
+      "text": "asdasd"
     }
   ]
 }

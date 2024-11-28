@@ -1,11 +1,15 @@
 
-import { getAllTodos } from "@/api";
+import { getAllTodos } from "@/app/api/api";
+import { getAllTodo } from "@/app/api/apiPostgres";
 import AddTask from "./components/AddTask";
 import ToDoList from "./components/ToDoList";
 
+
 export default async function Home() {
   const tasks = await getAllTodos();
+  const taskData = await getAllTodo();
   console.log(tasks);
+  console.log(taskData);
   return (
     <main className='max-w-4xl mx-auto'>
       <div className='text-center my-5 flex flex-col'>
@@ -14,6 +18,7 @@ export default async function Home() {
       </div>
 
       <ToDoList tasks ={ tasks }/>
+      <ToDoList tasks ={ taskData }/>
       
     </main>
   );

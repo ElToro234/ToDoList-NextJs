@@ -3,7 +3,7 @@
 import React, { FormEventHandler, useState } from "react";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import Modal from "./Modal";
-import { addTodo } from "@/api";
+import { addTodo } from "@/app/api/api";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from 'uuid';
 
